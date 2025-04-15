@@ -1,0 +1,36 @@
+recipe website
+
+recipes of different food items
+
+project structure
+
+
+recipe website/
+    app.py
+    models.py              #it is used to exchange data between database and flask
+    forms.py               #it used to crud operations
+    templates/
+        base.html           #homepage
+        index.html
+        recipe.html         #display a particular recipe
+        new_recipe.html     #form to create new recipe
+        edit_recipe.html    #form to edit recipe
+    static/
+        style.css
+        images/
+
+    requirements.txt      #packages
+
+pip frezze>requirements.txt
+
+pip install -r requirements.txt
+
+flask db init
+flask db migrate
+
+
+post data,
+edit data,
+delete data 
+and 
+get data

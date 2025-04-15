@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Recipe{% endblock %}
+
+{% block content %}
+    <h2>Add New Recipe</h2>
+    <form action="{{ url_for('new_recipe') }}" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+            {{ form.title.label }}
+            {{ form.title }}
+            {{ form.category_id.label }}
+            {{ form.category_id }}
+            {{ form.ingredients.label }}
+            {{ form.ingredients }}
+            {{ form.instructions.label }}
+            {{ form.instructions }}
+        <button type="submit" class="btn btn-primary">Add Recipe</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}

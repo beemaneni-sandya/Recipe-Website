@@ -1,0 +1,12 @@
+{% block title %} ADD RECIPE {% endblock %}
+{% block content %}
+    <h2> Add New Recipe </h2>
+    <form action="{{ url_for('new_recipe') }}" method="post">
+        {{ form.hidden_tag() }}
+        <p>{{form.title.label}} {{form.title}}</p>
+        <p>{{form.ingredients.label}} {{form.ingredients}}</p>
+        <p>{{form.instructions.label}} {{form.instructions}}</p>
+        <p>{{form.category_id.label}} {{form.category_id}}</p>
+        <p>{{form.submit()}}</p>
+    </form>
+{% endblock %}
